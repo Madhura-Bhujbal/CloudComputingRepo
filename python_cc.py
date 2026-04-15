@@ -1,14 +1,17 @@
-# This program adds two numbers
+# Function to check if a number is prime
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
 
-num1 = 1.5
-num2 = 6.3
+# Taking input from the user
+start = int(input("Enter the starting number: "))
+end = int(input("Enter the ending number: "))
 
-# Add two numbers
-sum = float(num1) + float(num2)
-
-# The below code prints Hello, world!
-
-print('Hello, world!')
-
-# Display the sum
-print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+print(f"Prime numbers between {start} and {end} are:")
+for number in range(start, end + 1):
+    if is_prime(number):
+        print(number, end=" ")
