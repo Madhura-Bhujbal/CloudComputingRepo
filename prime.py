@@ -15,3 +15,4 @@ print(f"Prime numbers between {start} and {end} are:")
 for number in range(start, end + 1):
     if is_prime(number):
         print(number, end=" ")
+        
